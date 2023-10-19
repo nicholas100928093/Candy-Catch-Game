@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -26,8 +27,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //If player collides with object tagged "Coin"
-        if (other.transform.tag == "Candy")
+        if (other.gameObject.CompareTag("Candy"))
         {
 
             //add score here
